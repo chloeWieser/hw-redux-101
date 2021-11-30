@@ -34,7 +34,9 @@ In the src folder, create a `actions` and `reducers` folder
 
 ## Delete Student By ID
 
-In the `DeelteStudentByID` component, list out all of the students names using an anchor tag.  Set the onClick property of the anchor tag equal to a dispatched action that will delete the student from the student list when the link is clicked.  The dispatched action should use the userID to identify which student needs to be deleted.
+- In the `DelteStudentByID` component, list out all of the students names using an anchor tag.  
+- Set the onClick property of the anchor tag equal to a dispatched action that will delete the student from the student list when the link is clicked.  
+- The dispatched action should use the userID to identify which student needs to be deleted.
 
 ## Update Student List
 
