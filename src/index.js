@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+
 import App from './App';
 import AddItemInOrder from './components/AddItemInOrder'
 import AddNewStudent from './components/AddNewStudent'
@@ -16,7 +20,14 @@ import UpdateStudent from './components/UpdateStudent'
 import BaseLayout from './components/layout/BaseLayout';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
+import reducer from './reducers/reducer'
+
+//Reducer.createStore
+const store = createStore(reducer)
+
+
 ReactDOM.render(
+  <Provider store={store}>
   <React.StrictMode>
   <Router>
       <BaseLayout>
@@ -35,7 +46,9 @@ ReactDOM.render(
         </Routes>
       </BaseLayout>
     </Router>
-  </React.StrictMode>,
+  </React.StrictMode>
+  </Provider>
+  ,
   document.getElementById('root')
 );
 
