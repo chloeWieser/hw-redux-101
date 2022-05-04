@@ -23,7 +23,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import reducer from './reducers/reducer'
 
 //Reducer.createStore
-const store = createStore(reducer)
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() )
 
 
 ReactDOM.render(
