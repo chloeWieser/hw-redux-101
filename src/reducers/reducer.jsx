@@ -18,6 +18,35 @@ const reducer = (state, action) => {
                 count: action.students.length 
             }
     }
+    switch(action.type){
+        case "ADD_NEW_STUDENT":
+            return{
+                ...state,
+                students: state.students.concat(action.data),
+                count: state.count + 1
+            }
+    }
+    switch(action.type){
+        case "DELETE_STUDENT_ID":
+            return{
+                ...state,
+                students: state.students.filter(student =>{
+                    return student.id!== action.id
+                }),
+                count: state.count - 1
+            }
+    }
+    switch(action.type){
+        case "DELETE_STUDENT_NAME":
+            return{
+                ...state,
+                students: state.students.filter(student =>{
+                    return student.fName!== action.fName
+                }),
+                count: state.count - 1
+            }
+    }
+
 
     return state;
 }

@@ -4,11 +4,15 @@ import {v4 as uuidv4} from 'uuid'
 import {useDispatch, useSelector} from 'react-redux'//added
 
 
+
 const DisplayStudents = () => {
 
     //display the current students
     const studentList = useSelector(state => state.students)  //added
-    const counter = useSelector(state => state.count)  //added
+    const counter = useSelector(state => state.count)
+
+
+  
   return (
     <>
     Display Students
