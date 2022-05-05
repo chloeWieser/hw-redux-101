@@ -46,6 +46,16 @@ const reducer = (state, action) => {
                 count: state.count - 1
             }
     }
+    // switch(action.type){
+    //     case "SORT_STUDENT_DATA":
+    //         return{
+    //             ...state,
+    //             students: state.students.sort(function (a, b) {
+    //                 return a.toLowerCase().localeCompare(b.toLowerCase());
+                  
+    //             }),
+    //         }
+    // }
 
 
     return state;
